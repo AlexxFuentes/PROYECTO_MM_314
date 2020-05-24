@@ -53,11 +53,11 @@ namespace Introduccion_a_C_sharp
             int y;
             float z;
 
-            Console.WriteLine("Escriba el primer numero");
+            Console.WriteLine("Escriba el primer numero entero");
             datox = Console.ReadLine();
             x = Convert.ToInt16(datox);
 
-            Console.WriteLine("Escriba el segundo numero");
+            Console.WriteLine("Escriba el segundo numero entero");
             datoy = Console.ReadLine();
             y = Convert.ToInt16(datoy);
 
@@ -72,22 +72,24 @@ namespace Introduccion_a_C_sharp
             z = x - y;
             Console.WriteLine("Resultado de la resta es " +z);
 
-            z = x / y;
+            z = x / y;//no se pueden dividir dos numeros de tipo int
             Console.WriteLine("Resultado de la division es " +z);
 
             /*-------------------------------------------------*/
         
             float x1;
             float y1;
-            Console.WriteLine("Escriba el primer numero");
+
+            Console.WriteLine("Escriba el primer numero de tipo float (Decimal)");
             x1 = float.Parse(Console.ReadLine());
 
-            Console.WriteLine("Escriba el segundo numero");
+            Console.WriteLine("Escriba el segundo numero de tipo float (Decimal)");
             y1 = float.Parse(Console.ReadLine());
 
 
             Console.WriteLine("Resultado de la division es " + x/y);
 
+            /*-------------------------------------------------*/
 
             string str = "Hello";
             char[] characters = str.ToCharArray();
@@ -106,8 +108,9 @@ namespace Introduccion_a_C_sharp
 
             num12 = Convert.ToDouble(var2);
 
-            Console.WriteLine(var2);
+            Console.WriteLine("Despues de convertir una cadena a un double" + var2);
 
+            Console.WriteLine("Ingrese un numero entero");
             x2 = int.Parse(Console.ReadLine());
             Console.WriteLine(x);
 
