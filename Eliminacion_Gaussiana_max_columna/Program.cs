@@ -84,8 +84,8 @@ namespace Eliminacion_Gaussiana_max_columna
                             Matriz3[max, k] = Aux;
                         }
                     }
-                    Console.WriteLine("Despues de ordenar");
-                    ImprimeMatriz(Matriz3, n3);
+                    //Console.WriteLine("Despues de ordenar");
+                    //ImprimeMatriz(Matriz3, n3);
 
                     if (Matriz3[j, i] == 0)
                     {
