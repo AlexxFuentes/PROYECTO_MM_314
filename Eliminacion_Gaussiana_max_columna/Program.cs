@@ -86,17 +86,25 @@ namespace Eliminacion_Gaussiana_max_columna
                     }
                     Console.WriteLine("Despues de ordenar");
                     ImprimeMatriz(Matriz3, n3);
-                    for (j = i + 1; j < n3; j++)
+
+                    if (Matriz3[j, i] == 0)
                     {
-                        for (k = n3; k >= i; k--)
+                        Console.WriteLine("El sistema no tiene solucion unicas.");
+                    }
+                    else
+                    {
+                        for (j = i + 1; j < n3; j++)
                         {
-                            Matriz3[j, k] -= Matriz3[i, k] * Matriz3[j, i] / Matriz3[i, i];
+                            for (k = n3; k >= i; k--)
+                            {
+                                Matriz3[j, k] -= Matriz3[i, k] * Matriz3[j, i] / Matriz3[i, i];
+                            }
                         }
                     }
                 }
             }
 
-            if (Matriz3[n3 - 1, n3 - 1] == 0 || Matriz3[0, 0] == 0)
+            if (Matriz3[n3 - 1, n3 - 1] == 0)
             {
                 Console.WriteLine("El sistema no tiene solucion unica.");
             }
