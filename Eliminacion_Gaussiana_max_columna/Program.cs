@@ -7,7 +7,7 @@ namespace Eliminacion_Gaussiana_max_columna
     {
         static void Main(string[] args)
         {
-            byte orden = 0;
+            byte orden;
 
             Console.WriteLine("METODO DE ELIMINACION GAUSSIANA MAXIMO DE COLUMNAS O PIVOTEO PARCIAL");
             Console.WriteLine();
@@ -57,7 +57,7 @@ namespace Eliminacion_Gaussiana_max_columna
             {
                 for (byte j = 0; j < n1 + 1; j++)
                 {
-                    Console.Write(Matriz1[i, j] + "   ");
+                    Console.Write(Matriz1[i, j] + "    ");
                 }
                 Console.WriteLine();
             }
@@ -65,8 +65,8 @@ namespace Eliminacion_Gaussiana_max_columna
         }
         static void EliminacionGauus(ref float[,] Matriz3, byte n3)
         {
-            float Aux = 0;
-            int max = 0, i, j, k;
+            float Aux;
+            int max, i, j, k;
 
             for (i = 0; i < n3; i++)
             {
@@ -84,8 +84,8 @@ namespace Eliminacion_Gaussiana_max_columna
                             Matriz3[max, k] = Aux;
                         }
                     }
-                    //Console.WriteLine("Despues de ordenar");
-                    //ImprimeMatriz(Matriz3, n3);
+                    Console.WriteLine("Despues de ordenar");
+                    ImprimeMatriz(Matriz3, n3);
                     for (j = i + 1; j < n3; j++)
                     {
                         for (k = n3; k >= i; k--)
