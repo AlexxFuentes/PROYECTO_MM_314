@@ -104,7 +104,7 @@ namespace Eliminacion_Gaussiana_max_columna
                 }
             }
 
-            if (Matriz3[n3 - 1, n3 - 1] == 0)
+            if (Matriz3[n3-1, n3 - 1] == 0)
             {
                 Console.WriteLine("El sistema no tiene solucion unica.");
             }
@@ -119,13 +119,12 @@ namespace Eliminacion_Gaussiana_max_columna
         {
 
             double[] resultado = new double[n4];
+            double sum=0;
 
             resultado[n4 - 1] = Matriz4[n4 - 1, n4] / Matriz4[n4 - 1, n4 - 1];
 
             for (int f = n4 - 2; f >= 0; f--)
             {
-                double sum = 0;
-
                 for (int i = n4 - 1; i > f; i--)
                 {
                     sum += Matriz4[f, i] * resultado[i];
